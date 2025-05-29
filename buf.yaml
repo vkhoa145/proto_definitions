@@ -1,0 +1,4 @@
+version: v1
+name: github.com/vkhoa145/proto_definition
+deps:
+  - buf.build/googleapis/googleapis

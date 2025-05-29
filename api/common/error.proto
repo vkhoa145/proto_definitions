@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/vkhoa145/proto_definition/gen/go/common;common";
+
+message Error {
+  int32 code = 1;
+  string message = 2;
+}
