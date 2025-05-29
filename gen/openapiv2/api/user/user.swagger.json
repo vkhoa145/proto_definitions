@@ -16,14 +16,14 @@
     "application/json"
   ],
   "paths": {
-    "/v1/users/{id}": {
+    "/v1/users/{name}": {
       "get": {
-        "operationId": "UserService_GetUser",
+        "operationId": "UserService_SayHello",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userGetUserResponse"
+              "$ref": "#/definitions/userSayHelloResponse"
             }
           },
           "default": {
@@ -35,7 +35,7 @@
         },
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
@@ -76,7 +76,7 @@
         }
       }
     },
-    "userGetUserResponse": {
+    "userSayHelloResponse": {
       "type": "object",
       "properties": {
         "id": {

@@ -2,23 +2,23 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "github.com/vkhoa145/proto_definition/gen/go/user;user";
+option go_package = "github.com/vkhoa145/proto_definitions/gen/go/user;user";
 
 import "google/api/annotations.proto";
 
 service UserService {
-  rpc GetUser (GetUserRequest) returns (GetUserResponse) {
+  rpc SayHello (SayHelloRequest) returns (SayHelloResponse) {
     option (google.api.http) = {
-      get: "/v1/users/{id}"
+      get: "/v1/users/{name}"
     };
   }
 }
 
-message GetUserRequest {
-  string id = 1;
+message SayHelloRequest {
+  string name = 1;
 }
 
-message GetUserResponse {
+message SayHelloResponse {
   string id = 1;
   string name = 2;
 }
