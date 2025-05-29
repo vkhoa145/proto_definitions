@@ -32,7 +32,7 @@ var _ = utilities.NewDoubleArray
 var _ = metadata.Join
 
 func request_UserService_SayHello_0(ctx context.Context, marshaler runtime.Marshaler, client UserServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq SayHelloRequest
+	var protoReq SayRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -58,7 +58,7 @@ func request_UserService_SayHello_0(ctx context.Context, marshaler runtime.Marsh
 }
 
 func local_request_UserService_SayHello_0(ctx context.Context, marshaler runtime.Marshaler, server UserServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq SayHelloRequest
+	var protoReq SayRequest
 	var metadata runtime.ServerMetadata
 
 	var (

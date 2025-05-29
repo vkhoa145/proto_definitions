@@ -23,7 +23,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userSayHelloResponse"
+              "$ref": "#/definitions/userSayResponse"
             }
           },
           "default": {
@@ -76,7 +76,7 @@
         }
       }
     },
-    "userSayHelloResponse": {
+    "userSayResponse": {
       "type": "object",
       "properties": {
         "id": {

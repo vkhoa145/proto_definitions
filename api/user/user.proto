@@ -7,18 +7,18 @@ option go_package = "github.com/vkhoa145/proto_definitions/gen/go/user;user";
 import "google/api/annotations.proto";
 
 service UserService {
-  rpc SayHello (SayHelloRequest) returns (SayHelloResponse) {
+  rpc SayHello (SayRequest) returns (SayResponse) {
     option (google.api.http) = {
       get: "/v1/users/{name}"
     };
   }
 }
 
-message SayHelloRequest {
+message SayRequest {
   string name = 1;
 }
 
-message SayHelloResponse {
+message SayResponse {
   string id = 1;
   string name = 2;
 }

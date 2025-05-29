@@ -26,7 +26,7 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UserServiceClient interface {
-	SayHello(ctx context.Context, in *SayHelloRequest, opts ...grpc.CallOption) (*SayHelloResponse, error)
+	SayHello(ctx context.Context, in *SayRequest, opts ...grpc.CallOption) (*SayResponse, error)
 }
 
 type userServiceClient struct {
@@ -37,8 +37,8 @@ func NewUserServiceClient(cc grpc.ClientConnInterface) UserServiceClient {
 	return &userServiceClient{cc}
 }
 
-func (c *userServiceClient) SayHello(ctx context.Context, in *SayHelloRequest, opts ...grpc.CallOption) (*SayHelloResponse, error) {
-	out := new(SayHelloResponse)
+func (c *userServiceClient) SayHello(ctx context.Context, in *SayRequest, opts ...grpc.CallOption) (*SayResponse, error) {
+	out := new(SayResponse)
 	err := c.cc.Invoke(ctx, UserService_SayHello_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -50,7 +50,7 @@ func (c *userServiceClient) SayHello(ctx context.Context, in *SayHelloRequest, o
 // All implementations must embed UnimplementedUserServiceServer
 // for forward compatibility
 type UserServiceServer interface {
-	SayHello(context.Context, *SayHelloRequest) (*SayHelloResponse, error)
+	SayHello(context.Context, *SayRequest) (*SayResponse, error)
 	mustEmbedUnimplementedUserServiceServer()
 }
 
@@ -58,7 +58,7 @@ type UserServiceServer interface {
 type UnimplementedUserServiceServer struct {
 }
 
-func (UnimplementedUserServiceServer) SayHello(context.Context, *SayHelloRequest) (*SayHelloResponse, error) {
+func (UnimplementedUserServiceServer) SayHello(context.Context, *SayRequest) (*SayResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SayHello not implemented")
 }
 func (UnimplementedUserServiceServer) mustEmbedUnimplementedUserServiceServer() {}
@@ -75,7 +75,7 @@ func RegisterUserServiceServer(s grpc.ServiceRegistrar, srv UserServiceServer) {
 }
 
 func _UserService_SayHello_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SayHelloRequest)
+	in := new(SayRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -87,7 +87,7 @@ func _UserService_SayHello_Handler(srv interface{}, ctx context.Context, dec fun
 		FullMethod: UserService_SayHello_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).SayHello(ctx, req.(*SayHelloRequest))
+		return srv.(UserServiceServer).SayHello(ctx, req.(*SayRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
