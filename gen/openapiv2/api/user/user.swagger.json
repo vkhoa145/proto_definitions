@@ -16,14 +16,14 @@
     "application/json"
   ],
   "paths": {
-    "/v1/users/{name}": {
+    "/v1/user/auth/sign_up": {
       "get": {
-        "operationId": "UserService_SayHello",
+        "operationId": "UserService_SignUp",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userSayResponse"
+              "$ref": "#/definitions/userSignUpResponse"
             }
           },
           "default": {
@@ -35,9 +35,40 @@
         },
         "parameters": [
           {
-            "name": "name",
-            "in": "path",
-            "required": true,
+            "name": "email",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "passwordConfirm",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "birthday",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": false,
             "type": "string"
           }
         ],
@@ -76,13 +107,10 @@
         }
       }
     },
-    "userSayResponse": {
+    "userSignUpResponse": {
       "type": "object",
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "name": {
+        "accessToken": {
           "type": "string"
         }
       }
