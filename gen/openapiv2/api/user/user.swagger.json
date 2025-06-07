@@ -17,7 +17,7 @@
   ],
   "paths": {
     "/v1/user/auth/sign_up": {
-      "get": {
+      "post": {
         "operationId": "UserService_SignUp",
         "responses": {
           "200": {
@@ -35,41 +35,12 @@
         },
         "parameters": [
           {
-            "name": "email",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "password",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "passwordConfirm",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "birthday",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "age",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "phone",
-            "in": "query",
-            "required": false,
-            "type": "string"
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/userSignUpRequest"
+            }
           }
         ],
         "tags": [
@@ -104,6 +75,30 @@
             "type": "object",
             "$ref": "#/definitions/protobufAny"
           }
+        }
+      }
+    },
+    "userSignUpRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirm": {
+          "type": "string"
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "phone": {
+          "type": "string"
         }
       }
     },
