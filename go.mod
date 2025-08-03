@@ -1,4 +1,4 @@
-module github.com/vkhoa145/api_gateway
+module github.com/vkhoa145/proto_definitions
 
 go 1.23.0
 
