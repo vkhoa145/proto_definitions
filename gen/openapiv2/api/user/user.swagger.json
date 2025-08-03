@@ -23,7 +23,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userSignUpResponse"
+              "$ref": "#/definitions/v1UserProfileResponse"
             }
           },
           "default": {
@@ -39,7 +39,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/userSignUpRequest"
+              "$ref": "#/definitions/v1GetUserProfileRequest"
             }
           }
         ],
@@ -78,16 +78,19 @@
         }
       }
     },
-    "userSignUpRequest": {
+    "v1GetUserProfileRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "v1UserProfileResponse": {
       "type": "object",
       "properties": {
         "email": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        },
-        "passwordConfirm": {
           "type": "string"
         },
         "birthday": {
@@ -98,14 +101,6 @@
           "format": "int32"
         },
         "phone": {
-          "type": "string"
-        }
-      }
-    },
-    "userSignUpResponse": {
-      "type": "object",
-      "properties": {
-        "accessToken": {
           "type": "string"
         }
       }

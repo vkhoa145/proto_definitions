@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package common;
+package common.v1;
 
-option go_package = "github.com/vkhoa145/proto_definition/gen/go/common;common";
+option go_package = "github.com/vkhoa145/proto_definition/gen/go/common/v1;commonv1";
 
 message Error {
   int32 code = 1;

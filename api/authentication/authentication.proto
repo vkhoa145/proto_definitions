@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package authentication.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/vkhoa145/proto_definitions/gen/go/authentication/v1;authenticationv1";
+
+service AuthenticationService {
+  rpc SignUp(SignUpRequest) returns (SignUpResponse) {
+    option (google.api.http) = {
+      post: "/v1/authentication/sign_up"
+      body: "*"
+    };
+  }
+
+  rpc SignIn(SignInRequest) returns (SignInResponse) {
+    option (google.api.http) = {
+      post: "/v1/authentication/sign_in"
+      body: "*"
+    };
+  }
+}
+
+message SignUpRequest {
+  string email = 1;
+  string password = 2;
+  string password_confirm = 3;
+  string birthday = 4;
+  int32 age = 5;
+  string phone = 6;
+}
+
+message SignUpResponse {
+  string message = 1;
+}
+
+message SignInRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message SignInResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
