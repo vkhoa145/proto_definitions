@@ -165,23 +165,10 @@
     "v1SignUpResponse": {
       "type": "object",
       "properties": {
-        "id": {
+        "accessToken": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        },
-        "birthday": {
-          "type": "string"
-        },
-        "age": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "phone": {
+        "refreshToken": {
           "type": "string"
         }
       }

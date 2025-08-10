@@ -33,12 +33,8 @@ message SignUpRequest {
 }
 
 message SignUpResponse {
-  string id = 1;
-  string email = 2;
-  string username = 3;
-  string birthday = 4;
-  int32 age = 5;
-  string phone = 6;
+  string access_token = 1;
+  string refresh_token = 2;
 }
 
 message SignInRequest {
