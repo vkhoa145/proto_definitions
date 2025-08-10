@@ -118,6 +118,9 @@
         },
         "password": {
           "type": "string"
+        },
+        "username": {
+          "type": "string"
         }
       }
     },
@@ -153,13 +156,32 @@
         },
         "phone": {
           "type": "string"
+        },
+        "username": {
+          "type": "string"
         }
       }
     },
     "v1SignUpResponse": {
       "type": "object",
       "properties": {
-        "message": {
+        "id": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "phone": {
           "type": "string"
         }
       }

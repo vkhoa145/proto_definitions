@@ -29,15 +29,22 @@ message SignUpRequest {
   string birthday = 4;
   int32 age = 5;
   string phone = 6;
+  string username = 7;
 }
 
 message SignUpResponse {
-  string message = 1;
+  string id = 1;
+  string email = 2;
+  string username = 3;
+  string birthday = 4;
+  int32 age = 5;
+  string phone = 6;
 }
 
 message SignInRequest {
   string email = 1;
   string password = 2;
+  string username = 3;
 }
 
 message SignInResponse {
