@@ -1,0 +1,141 @@
+syntax = "proto3";
+
+package authentication.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/vkhoa145/proto_definitions/gen/go/authentication/v1;authenticationv1";
+
+service AuthenticationService {
+  rpc SignUp(SignUpRequest) returns (SignUpResponse) {
+    option (google.api.http) = {
+      post: "/v1/authentication/sign_up"
+      body: "*"
+    };
+  }
+
+  rpc SignIn(SignInRequest) returns (SignInResponse) {
+    option (google.api.http) = {
+      post: "/v1/authentication/sign_in"
+      body: "*"
+    };
+  }
+
+  rpc RefreshToken(RefreshTokenRequest) returns (RequestTokenResponse) {
+    option (google.api.http) = {
+      post: "/v1/authentication/refresh_token"
+      body: "*"
+    };
+  }
+
+  rpc ForgetPassword(ForgetPasswordRequest) returns (ForgetPasswordResponse) {
+    option (google.api.http) = {
+      get: "/v1/authentication/forget_password"
+    };
+  }
+
+  rpc ResetPassword(ResetPasswordRequest) returns (ResetPasswordResponse) {
+    option (google.api.http) = {
+      post: "/v1/authentication/reset_password"
+      body: "*"
+    };
+  }
+
+  rpc VerifyAuthenticationCode(VerifyAuthenticationCodeRequest) returns (VerifyAuthenticationCodeResponse) {
+    option (google.api.http) = {
+      get: "/v1/authentication/verify_auth_code"
+    };
+  }
+
+  rpc VerifyResetPasswordLink(VerifyResetPasswordLinkRequest) returns (VerifyResetPasswordLinkResponse) {
+    option (google.api.http) = {
+      get: "/v1/authentication/verify_reset_password_url"
+    };
+  }
+
+  rpc Logout(LogoutRequest) returns (LogoutResponse) {
+    option (google.api.http) = {
+      delete: "/v1/authentication/logout"
+    };
+  }
+}
+
+message SignUpRequest {
+  string email = 1;
+  string password = 2;
+  string password_confirm = 3;
+  string birthday = 4;
+  int32 age = 5;
+  string phone = 6;
+  string username = 7;
+  string first_name = 8;
+  string last_name = 9;
+}
+
+message SignUpResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message SignInRequest {
+  string email = 1;
+  string password = 2;
+  string username = 3;
+}
+
+message SignInResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message RefreshTokenRequest {
+  string refresh_token = 1;
+}
+
+message RequestTokenResponse {
+  string refresh_token = 1;
+  string access_token = 2;
+}
+
+message ForgetPasswordRequest {
+  string email = 1;
+  string username = 2;
+}
+
+message ForgetPasswordResponse {
+  string forget_password_url = 1;
+  string expired_date = 2;
+}
+
+message ResetPasswordRequest {
+  string password = 1;
+  string password_confirm = 2;
+}
+
+message ResetPasswordResponse {
+  string message = 1;
+}
+
+message VerifyAuthenticationCodeRequest {
+  string code = 1;
+}
+
+message VerifyAuthenticationCodeResponse {
+  string message = 1;
+}
+
+message VerifyResetPasswordLinkRequest {
+  string code = 1;
+}
+
+message VerifyResetPasswordLinkResponse {
+  string message = 1;
+}
+
+message LogoutRequest {
+  string user_id = 1;
+}
+
+message LogoutResponse {
+  string message = 1;
+}

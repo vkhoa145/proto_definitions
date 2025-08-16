@@ -1,0 +1,95 @@
+syntax = "proto3";
+
+package user.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/vkhoa145/proto_definitions/gen/go/user/v1;userv1";
+
+service UserService {
+  rpc GetUserProfile(GetUserProfileRequest) returns (GetUserProfileResponse) {
+    option (google.api.http) = {
+      get: "/users/{user_id}"
+    };
+  }
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
+    option (google.api.http) = {
+      post: "/users"
+      body: "*"
+    };
+  }
+  rpc UpdateUser(UpdateUserProfileRequest) returns (UpdateUserProfileResponse) {
+    option (google.api.http) = {
+      put: "/users/{user_id}"
+      body: "*"
+    };
+  }
+  rpc DeactivateUser(DeactiveUserRequest) returns (DeactivateUserResponse) {
+    option (google.api.http) = {
+      delete: "/users/{user_id}"
+    };
+  }
+}
+
+message GetUserProfileRequest {
+  int32 user_id = 1;
+}
+
+message GetUserProfileResponse {
+  int32 id = 1;
+  string email = 2;
+  string birthday = 3;
+  int32 age = 4;
+  string phone = 5;
+  string username = 6;
+}
+
+message CreateUserRequest {
+  string email = 1;
+  string username = 2;
+  string first_name = 3;
+  string last_name = 4;
+  int32 age = 5;
+  string birthday = 6;
+  string phone = 7;
+}
+
+message CreateUserResponse {
+  string email = 1;
+  string username = 2;
+  string first_name = 3;
+  string last_name = 4;
+  int32 age = 5;
+  string birthday = 6;
+  string phone = 7;
+}
+
+message UpdateUserProfileRequest {
+  string email = 1;
+  string username = 2;
+  string first_name = 3;
+  string last_name = 4;
+  int32 age = 5;
+  string birthday = 6;
+  string phone = 7;
+  int32 user_id = 8;
+}
+
+message UpdateUserProfileResponse {
+  string email = 1;
+  string username = 2;
+  string first_name = 3;
+  string last_name = 4;
+  int32 age = 5;
+  string birthday = 6;
+  string phone = 7;
+  int32 id = 8;
+}
+
+message DeactiveUserRequest {
+  int32 user_id = 1;
+}
+
+message DeactivateUserResponse {
+  string message = 1;
+}
