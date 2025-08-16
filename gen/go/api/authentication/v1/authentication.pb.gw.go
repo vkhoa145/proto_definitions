@@ -293,7 +293,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignUp", runtime.WithHTTPPathPattern("/v1/authentication/sign_up"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignUp", runtime.WithHTTPPathPattern("/authentication/sign_up"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -318,7 +318,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignIn", runtime.WithHTTPPathPattern("/v1/authentication/sign_in"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignIn", runtime.WithHTTPPathPattern("/authentication/sign_in"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -343,7 +343,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/RefreshToken", runtime.WithHTTPPathPattern("/v1/authentication/refresh_token"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/RefreshToken", runtime.WithHTTPPathPattern("/authentication/refresh_token"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -368,7 +368,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ForgetPassword", runtime.WithHTTPPathPattern("/v1/authentication/forget_password"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ForgetPassword", runtime.WithHTTPPathPattern("/authentication/forget_password"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -393,7 +393,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ResetPassword", runtime.WithHTTPPathPattern("/v1/authentication/reset_password"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ResetPassword", runtime.WithHTTPPathPattern("/authentication/reset_password"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -418,7 +418,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyAuthenticationCode", runtime.WithHTTPPathPattern("/v1/authentication/verify_auth_code"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyAuthenticationCode", runtime.WithHTTPPathPattern("/authentication/verify_auth_code"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -443,7 +443,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyResetPasswordLink", runtime.WithHTTPPathPattern("/v1/authentication/verify_reset_password_url"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyResetPasswordLink", runtime.WithHTTPPathPattern("/authentication/verify_reset_password_url"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -468,7 +468,7 @@ func RegisterAuthenticationServiceHandlerServer(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/Logout", runtime.WithHTTPPathPattern("/v1/authentication/logout"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/authentication.v1.AuthenticationService/Logout", runtime.WithHTTPPathPattern("/authentication/logout"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -532,7 +532,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignUp", runtime.WithHTTPPathPattern("/v1/authentication/sign_up"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignUp", runtime.WithHTTPPathPattern("/authentication/sign_up"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -554,7 +554,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignIn", runtime.WithHTTPPathPattern("/v1/authentication/sign_in"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/SignIn", runtime.WithHTTPPathPattern("/authentication/sign_in"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -576,7 +576,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/RefreshToken", runtime.WithHTTPPathPattern("/v1/authentication/refresh_token"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/RefreshToken", runtime.WithHTTPPathPattern("/authentication/refresh_token"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -598,7 +598,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ForgetPassword", runtime.WithHTTPPathPattern("/v1/authentication/forget_password"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ForgetPassword", runtime.WithHTTPPathPattern("/authentication/forget_password"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -620,7 +620,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ResetPassword", runtime.WithHTTPPathPattern("/v1/authentication/reset_password"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/ResetPassword", runtime.WithHTTPPathPattern("/authentication/reset_password"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -642,7 +642,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyAuthenticationCode", runtime.WithHTTPPathPattern("/v1/authentication/verify_auth_code"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyAuthenticationCode", runtime.WithHTTPPathPattern("/authentication/verify_auth_code"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -664,7 +664,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyResetPasswordLink", runtime.WithHTTPPathPattern("/v1/authentication/verify_reset_password_url"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/VerifyResetPasswordLink", runtime.WithHTTPPathPattern("/authentication/verify_reset_password_url"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -686,7 +686,7 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/Logout", runtime.WithHTTPPathPattern("/v1/authentication/logout"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/authentication.v1.AuthenticationService/Logout", runtime.WithHTTPPathPattern("/authentication/logout"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -706,21 +706,21 @@ func RegisterAuthenticationServiceHandlerClient(ctx context.Context, mux *runtim
 }
 
 var (
-	pattern_AuthenticationService_SignUp_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "sign_up"}, ""))
+	pattern_AuthenticationService_SignUp_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "sign_up"}, ""))
 
-	pattern_AuthenticationService_SignIn_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "sign_in"}, ""))
+	pattern_AuthenticationService_SignIn_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "sign_in"}, ""))
 
-	pattern_AuthenticationService_RefreshToken_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "refresh_token"}, ""))
+	pattern_AuthenticationService_RefreshToken_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "refresh_token"}, ""))
 
-	pattern_AuthenticationService_ForgetPassword_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "forget_password"}, ""))
+	pattern_AuthenticationService_ForgetPassword_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "forget_password"}, ""))
 
-	pattern_AuthenticationService_ResetPassword_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "reset_password"}, ""))
+	pattern_AuthenticationService_ResetPassword_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "reset_password"}, ""))
 
-	pattern_AuthenticationService_VerifyAuthenticationCode_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "verify_auth_code"}, ""))
+	pattern_AuthenticationService_VerifyAuthenticationCode_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "verify_auth_code"}, ""))
 
-	pattern_AuthenticationService_VerifyResetPasswordLink_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "verify_reset_password_url"}, ""))
+	pattern_AuthenticationService_VerifyResetPasswordLink_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "verify_reset_password_url"}, ""))
 
-	pattern_AuthenticationService_Logout_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "authentication", "logout"}, ""))
+	pattern_AuthenticationService_Logout_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"authentication", "logout"}, ""))
 )
 
 var (

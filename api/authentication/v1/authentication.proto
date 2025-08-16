@@ -9,53 +9,53 @@ option go_package = "github.com/vkhoa145/proto_definitions/gen/go/authentication
 service AuthenticationService {
   rpc SignUp(SignUpRequest) returns (SignUpResponse) {
     option (google.api.http) = {
-      post: "/v1/authentication/sign_up"
+      post: "/authentication/sign_up"
       body: "*"
     };
   }
 
   rpc SignIn(SignInRequest) returns (SignInResponse) {
     option (google.api.http) = {
-      post: "/v1/authentication/sign_in"
+      post: "/authentication/sign_in"
       body: "*"
     };
   }
 
   rpc RefreshToken(RefreshTokenRequest) returns (RequestTokenResponse) {
     option (google.api.http) = {
-      post: "/v1/authentication/refresh_token"
+      post: "/authentication/refresh_token"
       body: "*"
     };
   }
 
   rpc ForgetPassword(ForgetPasswordRequest) returns (ForgetPasswordResponse) {
     option (google.api.http) = {
-      get: "/v1/authentication/forget_password"
+      get: "/authentication/forget_password"
     };
   }
 
   rpc ResetPassword(ResetPasswordRequest) returns (ResetPasswordResponse) {
     option (google.api.http) = {
-      post: "/v1/authentication/reset_password"
+      post: "/authentication/reset_password"
       body: "*"
     };
   }
 
   rpc VerifyAuthenticationCode(VerifyAuthenticationCodeRequest) returns (VerifyAuthenticationCodeResponse) {
     option (google.api.http) = {
-      get: "/v1/authentication/verify_auth_code"
+      get: "/authentication/verify_auth_code"
     };
   }
 
   rpc VerifyResetPasswordLink(VerifyResetPasswordLinkRequest) returns (VerifyResetPasswordLinkResponse) {
     option (google.api.http) = {
-      get: "/v1/authentication/verify_reset_password_url"
+      get: "/authentication/verify_reset_password_url"
     };
   }
 
   rpc Logout(LogoutRequest) returns (LogoutResponse) {
     option (google.api.http) = {
-      delete: "/v1/authentication/logout"
+      delete: "/authentication/logout"
     };
   }
 }

@@ -226,6 +226,12 @@
         },
         "phone": {
           "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
         }
       }
     },
@@ -253,6 +259,10 @@
         },
         "phone": {
           "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
         }
       }
     },

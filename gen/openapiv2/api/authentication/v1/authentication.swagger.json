@@ -16,7 +16,7 @@
     "application/json"
   ],
   "paths": {
-    "/v1/authentication/forget_password": {
+    "/authentication/forget_password": {
       "get": {
         "operationId": "AuthenticationService_ForgetPassword",
         "responses": {
@@ -52,7 +52,7 @@
         ]
       }
     },
-    "/v1/authentication/logout": {
+    "/authentication/logout": {
       "delete": {
         "operationId": "AuthenticationService_Logout",
         "responses": {
@@ -82,7 +82,7 @@
         ]
       }
     },
-    "/v1/authentication/refresh_token": {
+    "/authentication/refresh_token": {
       "post": {
         "operationId": "AuthenticationService_RefreshToken",
         "responses": {
@@ -114,7 +114,7 @@
         ]
       }
     },
-    "/v1/authentication/reset_password": {
+    "/authentication/reset_password": {
       "post": {
         "operationId": "AuthenticationService_ResetPassword",
         "responses": {
@@ -146,7 +146,7 @@
         ]
       }
     },
-    "/v1/authentication/sign_in": {
+    "/authentication/sign_in": {
       "post": {
         "operationId": "AuthenticationService_SignIn",
         "responses": {
@@ -178,7 +178,7 @@
         ]
       }
     },
-    "/v1/authentication/sign_up": {
+    "/authentication/sign_up": {
       "post": {
         "operationId": "AuthenticationService_SignUp",
         "responses": {
@@ -210,7 +210,7 @@
         ]
       }
     },
-    "/v1/authentication/verify_auth_code": {
+    "/authentication/verify_auth_code": {
       "get": {
         "operationId": "AuthenticationService_VerifyAuthenticationCode",
         "responses": {
@@ -240,7 +240,7 @@
         ]
       }
     },
-    "/v1/authentication/verify_reset_password_url": {
+    "/authentication/verify_reset_password_url": {
       "get": {
         "operationId": "AuthenticationService_VerifyResetPasswordLink",
         "responses": {
